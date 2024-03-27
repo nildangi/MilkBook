@@ -1,8 +1,9 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, StatusBar } from 'react-native';
-import Navigations from './src/navigations/Navigations';
+import Navigations from './src/Navigations';
 import Splash from './src/screens/Splash';
+import BottomNavigation from './src/navigations/BottomNavigation/BottomNavigation';
 
 // create a component
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
     <View style={styles.container}>
       <StatusBar backgroundColor="#04C6F1" />
       <Navigations />
-      {/* <Splash /> */}
+      {/* <BottomNavigation /> */}
     </View>
   );
 };

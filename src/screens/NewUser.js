@@ -1,13 +1,14 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
-import Register from './Register';
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+
 // create a component
-const NewUser = ({navigation}) => {
+const NewUser = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <View style={{ flex: 0.4, backgroundColor: 'green', justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+            <View style={{ flex: 0.3, backgroundColor: 'green', justifyContent: 'center' }}>
+                <TouchableOpacity onPress={() => navigation.navigate('Registers')}>
                     <Image source={require('../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
             </View>
@@ -16,12 +17,11 @@ const NewUser = ({navigation}) => {
                 <Image
                     style={{}}
                     source={require('../assest/milkbook.png')} />
-                <Text>Hello</Text>
             </View>
 
-            <View style={{ flex: 0.5, backgroundColor: '#148F77', alignItems: 'center' }}>
+            <View style={{ flex: 0.5, backgroundColor: '#148F77', alignItems: 'center', }}>
                 <Image source={require('../assest/uploadlogo.png')}
-                    style={{ width: 80, height: 80 }}
+                    style={{ width: scale(70), height: verticalScale(70) }}
                 />
                 <Text>Hello</Text>
             </View>
@@ -42,15 +42,13 @@ const NewUser = ({navigation}) => {
                 <View style={styles.InputStyle} >
                     <TextInput style={styles.TextStyle} placeholder='Area Pin Code' />
                 </View >
-                <TouchableOpacity style={styles.btnStyle} onPress={() => navigation.navigate('NewUser')}>
+                <TouchableOpacity style={styles.btnStyle} onPress={() => navigation.navigate('Login')}>
                     <Text style={{ color: '#FFFF' }}>Register</Text>
                 </TouchableOpacity >
             </View>
 
             <View style={{ flex: 0.7, backgroundColor: '#566573', alignSelf: 'flex-start', justifyContent: 'space-around' }}>
-                <Image
-                    style={{}}
-                    source={require('../assest/pngwing.png')} />
+                <Image source={require('../assest/pngwing.png')} />
                 <Text>Hellos</Text>
             </View>
         </View>
@@ -65,9 +63,9 @@ const styles = StyleSheet.create({
     },
     InputStyle: {
         backgroundColor: 'white',
-        width: 328,
-        height: 50,
-        borderRadius: 30,
+        width: scale(280),
+        height: verticalScale(42),
+        borderRadius: moderateScale(30),
         justifyContent: 'center',
         alignContent: 'center',
         // alignItems: 'center',
@@ -81,9 +79,9 @@ const styles = StyleSheet.create({
     },
     btnStyle: {
         backgroundColor: '#000000',
-        width: 328,
-        height: 50,
-        borderRadius: 30,
+        width: scale(280),
+        height: verticalScale(42),
+        borderRadius: moderateScale(30),
         justifyContent: 'center',
         alignContent: 'center',
         alignItems: 'center',
