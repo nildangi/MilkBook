@@ -8,7 +8,8 @@ import { LogBox } from 'react-native';
 import Login from './screens/Login';
 import BottomNavigation from './navigations/BottomNavigation/BottomNavigation';
 import Otp from './screens/Otp';
-
+import Society from './navigations/Dashboard/Society'
+import StackNavigation from '../src/navigations/StackNavigation/StackNavigation'
 const Stack = createNativeStackNavigator();
 
 const Navigations = () => {
@@ -33,9 +34,11 @@ const Navigations = () => {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Otp" component={Otp} />
         <Stack.Screen name="BottomNavigation" component={BottomNavigation} />
+        <Stack.Screen name="Society" component={Society} />
+        <Stack.Screen name="StackNavigation" component={StackNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-
+git 
 export default Navigations;
