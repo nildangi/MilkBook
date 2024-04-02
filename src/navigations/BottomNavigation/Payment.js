@@ -26,7 +26,7 @@ const Payment = ({ navigation }) => {
                     
                 </View>
 
-                <View style={{ flex: 3, flexDirection: 'row', flexWrap: 'wrap' }}>
+                <View style={{ flex: 3, flexDirection: 'row', flexWrap: 'wrap',justifyContent:'center' }}>
                     <View>
                         <View style={styles.boxStyle}>
                             <Text style={{ fontSize: 17, color: 'black', fontWeight: '500' }}>Silver Spring PH-1</Text>
@@ -219,13 +219,13 @@ const styles = StyleSheet.create({
     boxStyle: {
         backgroundColor: 'white',
         flex: 1, 
-        width: 194,
-        height: 190,
+        width: scale(160),
+        height: verticalScale(170),
         margin: 5,
         borderRadius: 10,
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        elevation: 10
+        elevation: 10,
     },
 });
 

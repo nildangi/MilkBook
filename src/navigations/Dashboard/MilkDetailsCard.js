@@ -11,7 +11,7 @@ const MilkDetailsCard = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.1, backgroundColor: '#04C6F1', justifyContent: 'center', alignItems: 'center', height: verticalScale(30), flexDirection: 'row' }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Payment')}>
+                <TouchableOpacity onPress={() => navigation.navigate('PaymentDetails')}>
                     <Image style={{ marginLeft: scale(-70) }}
                         source={require('../../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
@@ -25,7 +25,7 @@ const MilkDetailsCard = ({navigation}) => {
                         <Text style={{ fontSize: 14, color: '#04C6F1' }}>3,600</Text></Text></Text>
                 </View>
                 <View>
-                    <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('Society')}>
+                    <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('BottomNavigation')}>
                         <Text style={{ color: '#FFFF' }}>Payment Done</Text>
                     </TouchableOpacity>
                 </View>

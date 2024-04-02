@@ -50,7 +50,7 @@ const NewUser = ({ navigation }) => {
 
             <View style={{ flex: 0.7, alignSelf: 'flex-start', justifyContent: 'space-around' }}>
                 <Image source={require('../assest/pngwing.png')} />
-                <Text>Hellos</Text>
+                
             </View>
         </View>
     );
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         paddingLeft: 10,
         alignSelf: 'center',
-        margin: 5
+        margin:(5),
     },
     TextStyle: {
         color: 'black',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         // alignContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
-        margin: 5
+        margin:scale(5),
     },
 });
 

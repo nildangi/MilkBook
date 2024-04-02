@@ -38,7 +38,7 @@ const Payment = ({ navigation }) => {
                         </View>
                     </TouchableOpacity>
                         <View>
-                            <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('Society')}>
+                            <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('BottomNavigation')}>
                                 <Text style={{ color: '#FFFF' }}>Payment Done</Text>
                             </TouchableOpacity>
                         </View>
