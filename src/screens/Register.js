@@ -8,29 +8,24 @@ const Register = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100' }}>
-                <Image
-                    style={{}}
-                    source={require('../assest/milkbook.png')} />
+                <Image source={require('../assest/milkbook.png')} />
             </View>
 
-            <View style={{ flex: 0.8}}>
-                <Image
-                    style={{}}
-                    source={require('../assest/pngwing.png')} />
+            <View style={{ flex: 0.8 }}>
+                <Image source={require('../assest/pngwing.png')} />
                 <Text>Hello</Text>
-
             </View>
 
             <View style={{ flex: 0.7, backgroundColor: '#FFFF', justifyContent: 'center', alignItems: 'center' }}>
                 <TouchableOpacity style={styles.btnStyle} onPress={() => navigation.navigate('NewUser')}>
                     <Text style={{ color: '#FFFF' }}>Register</Text>
                 </TouchableOpacity >
-                <View style={{flexDirection:'row',margin:10}}>
-                <Text style={{ alignSelf: 'center', alignContent: 'center',fontWeight:'600' }}>Already have an account ? 
-                </Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Login')}
-                ><Text style={{ color: '#04C6F1',marginLeft:5,fontWeight:'600'}}>Login</Text>
-                </TouchableOpacity>
+                <View style={{ flexDirection: 'row', margin:scale(10)}}>
+                    <Text style={{ alignSelf: 'center', alignContent: 'center', fontWeight: '600' }}>Already have an account ?
+                    </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}
+                    ><Text style={{ color: '#04C6F1', marginLeft: 5, fontWeight: '600' }}>Login</Text>
+                    </TouchableOpacity>
                 </View>
 
             </View>

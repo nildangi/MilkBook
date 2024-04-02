@@ -27,7 +27,7 @@ const BottomNavigation = () => {
           name="Home"
           component={Home}
           options={{
-            headerTitle:'Daskbord',
+            headerTitle:'Dashboard',
             headerTitleAlign: 'center',
             tabBarShowLabel: false,
             headerStyle: {

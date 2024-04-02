@@ -15,15 +15,11 @@ const Otp = ({ navigation }) => {
             </View>
             <></>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100' }}>
-                <Image
-                    style={{}}
-                    source={require('../assest/milkbook.png')} />
+                <Image source={require('../assest/milkbook.png')} />
             </View>
 
             <View style={{ flex: 0.8}}>
-                <Image
-                    style={{}}
-                    source={require('../assest/pngwing.png')} />
+                <Image source={require('../assest/pngwing.png')} />
                 <Text>Hello</Text>
 
             </View>
