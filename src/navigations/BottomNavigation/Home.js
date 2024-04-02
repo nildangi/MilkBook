@@ -18,7 +18,7 @@ const Home = ({navigation}) => {
                         <Image source={require('../../assest/icon/apartment.png')} />
                         <Text style={{ fontSize: 15, color: 'black', fontWeight: '500' }}>Total Society</Text>
                         <Text style={{ fontSize: 17, color: '#04C6F1' }}>10</Text>
-                        <TouchableOpacity style={styles.viewStyle} onPress={() => navigation.navigate('StackNavigation')}>
+                        <TouchableOpacity style={styles.viewStyle} onPress={() => navigation.navigate('Society')}>
                             <Text style={{ color: '#FFFF' }}>View Society</Text>
                         </TouchableOpacity>
                     </View>

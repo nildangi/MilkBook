@@ -8,23 +8,23 @@ import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 const Register = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <View style={{ flex: 0.25, backgroundColor: 'green', justifyContent: 'center' }}>
+            <View style={{ flex: 0.25, justifyContent: 'center',marginLeft:scale(5) }}>
                 <TouchableOpacity onPress={() => navigation.navigate('NewUser')}>
                     <Image source={require('../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flex: 0.9, backgroundColor: '#EB984E', justifyContent: 'center', alignItems: 'center', width: '100' }}>
+            <View style={{ flex: 0.9, justifyContent: 'center', alignItems: 'center', width: '100' }}>
                 <Image source={require('../assest/milkbook.png')} />
             </View>
 
-            <View style={{ flex: 0.6, backgroundColor: '#16A085',justifyContent:'space-between'}}>
-                <Image source={require('../assest/pngwing.png')}/>
-               
-            </View> 
+            <View style={{ flex: 0.6, justifyContent: 'space-between' }}>
+                <Image source={require('../assest/pngwing.png')} />
 
-            <View style={{ flex: 0.8, backgroundColor: '#1A5276', justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={{color:'#04C6F1',fontWeight:'700'}}>Login With OTP</Text>
+            </View>
+
+            <View style={{ flex: 0.8, justifyContent: 'center', alignItems: 'center',backgroundColor:'#FFFF' }}>
+                <Text style={{ color: '#04C6F1', fontWeight: '700' }}>Login With OTP</Text>
                 <View style={styles.InputStyle} >
                     <TextInput style={styles.TextStyle} placeholder='Mobile Number' />
                 </View >
@@ -33,7 +33,7 @@ const Register = ({ navigation }) => {
                 </TouchableOpacity >
             </View>
 
-            <View style={{ flex: 1.8, backgroundColor: '#D98880', justifyContent: 'center', alignItems: 'center' }}>
+            <View style={{ flex: 1.8, backgroundColor: '#FFFF', justifyContent: 'center', alignItems: 'center' }}>
                 <Image source={require('../assest/pngwing1.png')} />
             </View>
         </View>
@@ -65,11 +65,13 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         paddingLeft: 10,
         alignSelf: 'center',
-        margin: 5
+        margin: 10,
+        elevation:10
     },
     TextStyle: {
         color: 'black',
         fontWeight: '600',
+         
     },
 });
 

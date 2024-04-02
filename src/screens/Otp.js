@@ -8,19 +8,19 @@ const Otp = ({ navigation }) => {
     return (
         <View style={styles.container}>
 
-            <View style={{ flex: 0.25, backgroundColor: 'green', justifyContent: 'center' }}>
+            <View style={{ flex: 0.25, justifyContent: 'center',marginLeft:scale(5) }}>
                 <TouchableOpacity onPress={() => navigation.navigate('NewUser')}>
                     <Image source={require('../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
             </View>
             <></>
-            <View style={{ flex: 1, backgroundColor: '#EB984E', justifyContent: 'center', alignItems: 'center', width: '100' }}>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100' }}>
                 <Image
                     style={{}}
                     source={require('../assest/milkbook.png')} />
             </View>
 
-            <View style={{ flex: 0.8, backgroundColor: '#16A085' }}>
+            <View style={{ flex: 0.8}}>
                 <Image
                     style={{}}
                     source={require('../assest/pngwing.png')} />
@@ -28,9 +28,9 @@ const Otp = ({ navigation }) => {
 
             </View>
 
-            <View style={{ flex: 1.2, backgroundColor: '#1A5276', justifyContent: 'center', alignItems: 'center' }}>
-                <Text style={{ color: '#04C6F1' }}>Verification</Text>
-                <Text>Enter your OTP</Text>
+            <View style={{ flex: 1.3,backgroundColor:'#FFFF', justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ color: '#04C6F1',fontWeight:'800',fontSize:18 }}>Verification</Text>
+                <Text style={{ color: '#000000',fontWeight:'400',fontSize:14 }}>Enter your OTP</Text>
                 <View style={{ flexDirection: 'row' }}>
                     <TextInput style={styles.InputStyle} />
                     <TextInput style={styles.InputStyle} />
@@ -47,7 +47,7 @@ const Otp = ({ navigation }) => {
 
             </View>
 
-            <View style={{ flex: 1.8, backgroundColor: '#D98880', alignItems: 'center' }}>
+            <View style={{ flex: 2, backgroundColor: '#FFFF', alignItems: 'center' }}>
                 <Image source={require('../assest/cow.png')} />
             </View>
         </View>
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
         borderRadius: moderateScale(30),
         justifyContent: 'center',
         alignContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        margin:scale(6)
     },
     InputStyle: {
         backgroundColor: 'white',

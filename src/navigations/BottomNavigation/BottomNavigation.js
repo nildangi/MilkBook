@@ -20,23 +20,25 @@ const BottomNavigation = () => {
             backgroundColor: 'lightgray', // Background color of the tab bar
           },
           labelStyle: {
-            fontSize: 12, // Adjust the font size of the tab label
+            fontSize: 10, // Adjust the font size of the tab label
           },
         }}>
         <Tab.Screen
-          name="Dashboard"
+          name="Home"
           component={Home}
           options={{
+            headerTitle:'Daskbord',
             headerTitleAlign: 'center',
+            tabBarShowLabel: false,
             headerStyle: {
-              backgroundColor: '#04C6F1'
+              backgroundColor: '#04C6F1',
             },
             headerTintColor: '#FFFFFF',
             tabBarIcon: ({ focused }) => (
               <View style={styles.tabIconContainer}>
                 <Image
                   style={[styles.tabIcon, focused && styles.focusedIcon]}
-                  source={require('../../assest/icon/icon-1.png')}
+                  source={require('../../assest/icon/icon.png')}
                 />
               </View>
             ),
@@ -46,6 +48,8 @@ const BottomNavigation = () => {
           name="OrderList"
           component={OrderList}
           options={{
+            headerShown: false,
+            tabBarShowLabel: false,
             tabBarIcon: ({ focused }) => (
               <View style={styles.tabIconContainer}>
                 <Image
@@ -60,6 +64,8 @@ const BottomNavigation = () => {
           name="Payment"
           component={Payment}
           options={{
+            headerShown: false,
+          tabBarShowLabel: false,
             tabBarIcon: ({ focused }) => (
               <View style={styles.tabIconContainer}>
                 <Image
@@ -74,11 +80,13 @@ const BottomNavigation = () => {
           name="Profile"
           component={Profile}
           options={{
+            headerShown: false,
+          tabBarShowLabel: false,
             tabBarIcon: ({ focused }) => (
               <View style={styles.tabIconContainer}>
                 <Image
                   style={[styles.tabIcon, focused && styles.focusedIcon]}
-                  source={require('../../assest/icon/icon.png')}
+                  source={require('../../assest/icon/icon-4.png')}
                 />
               </View>
             ),
@@ -95,8 +103,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   tabIcon: {
-    width: 24,
-    height: 24,
+    width: 60,
+    height: 60,
     resizeMode: 'contain',
   },
   focusedIcon: {

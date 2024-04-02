@@ -7,26 +7,27 @@ import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 const NewUser = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <View style={{ flex: 0.3, backgroundColor: 'green', justifyContent: 'center' }}>
+            <View style={{ flex: 0.3, justifyContent: 'center',marginLeft:scale(5) }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Registers')}>
                     <Image source={require('../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flex: 0.9, backgroundColor: '#EC7063', justifyContent: 'center', alignItems: 'center' }}>
+            <View style={{ flex: 0.9, justifyContent: 'center', alignItems: 'center' }}>
                 <Image
                     style={{}}
                     source={require('../assest/milkbook.png')} />
+                    <Text style={{fontWeight:'800'}}>Create yout account</Text>
             </View>
 
-            <View style={{ flex: 0.5, backgroundColor: '#148F77', alignItems: 'center', }}>
+            <View style={{ flex: 0.5, alignItems: 'center', }}>
                 <Image source={require('../assest/uploadlogo.png')}
                     style={{ width: scale(70), height: verticalScale(70) }}
                 />
                 <Text>Hello</Text>
             </View>
 
-            <View style={{ flex: 3, backgroundColor: '#5499C7' }}>
+            <View style={{ flex: 3}}>
                 <View style={styles.InputStyle} >
                     <TextInput style={styles.TextStyle} placeholder='Dairy Shop Name' />
                 </View >
@@ -47,7 +48,7 @@ const NewUser = ({ navigation }) => {
                 </TouchableOpacity >
             </View>
 
-            <View style={{ flex: 0.7, backgroundColor: '#566573', alignSelf: 'flex-start', justifyContent: 'space-around' }}>
+            <View style={{ flex: 0.7, alignSelf: 'flex-start', justifyContent: 'space-around' }}>
                 <Image source={require('../assest/pngwing.png')} />
                 <Text>Hellos</Text>
             </View>
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     },
     TextStyle: {
         color: 'black',
-        fontWeight: '900',
+        fontWeight: '500',
     },
     btnStyle: {
         backgroundColor: '#000000',
