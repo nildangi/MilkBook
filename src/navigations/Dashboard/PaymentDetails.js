@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView,TextInput } from 'react-native';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 // create a component
@@ -17,7 +17,7 @@ const Payment = ({ navigation }) => {
                 </View>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row', margin: scale(5) }}>
                     <View style={styles.InputStyle}>
-                        <Text style={{ margin: 5 }}>Silver Spring PH-1</Text>
+                        <TextInput style={{ margin: 5 }}>Silver Spring PH-1</TextInput>
                         <Image
                             style={{ marginRight: 15, marginBottom: 10, width: 30, height: 30 }}
                             source={require('../../assest/Arrow-Down.png')} />

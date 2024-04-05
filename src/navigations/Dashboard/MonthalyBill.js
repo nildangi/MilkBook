@@ -12,7 +12,7 @@ const MonthalyBill = ({ navigation }) => {
         <View style={styles.container}>
             <View style={{ flex: 0.48, backgroundColor: '#04C6F1', }}>
                 <View style={{ justifyContent: 'space-between', alignItems: 'center', height: verticalScale(50), flexDirection: 'row'}}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Payment')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('MilkDetailsCard')}>
                         <Image style={{ marginLeft: scale(10) }}
                             source={require('../../assest/Arrow-Right.png')} />
                     </TouchableOpacity>

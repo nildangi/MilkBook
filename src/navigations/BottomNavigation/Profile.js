@@ -4,19 +4,20 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput } from 'reac
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 // create a component
-const Profile = () => {
+const Profile = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.3, backgroundColor: '#04C6F1', justifyContent: 'center', alignItems: 'center', height: verticalScale(30), flexDirection: 'row' }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Payment')}>
-                    <Image style={{ marginLeft: scale(-70) }}
+                <TouchableOpacity onPress={() => navigation.navigate('OrderDetail')}>
+                    <Image style={{ marginLeft: scale(-140) }}
                         source={require('../../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
-                <Text style={{ color: '#FFFF', fontWeight: '500', fontSize: 18 }}> Customer Payment Details</Text>
+                <Text style={{ color: '#FFFF', fontWeight: '500', fontSize: 18 }}> Profile</Text>
             </View>
             <View style={{ flex: 1, backgroundColor: '#F5F5F5', justifyContent: 'center', alignItems: 'center' }}>
-                <Image source={require('../../assest/Ellipse2.png')} />
-                <View style={{ margin: -10,height:20,width:80,alignItems:'center' }}>
+                <Image  
+                source={require('../../assest/Ellipse2.png')} />
+                <View style={{ margin: scale(-10),height:20,width:80,alignItems:'center' }}>
                     <Text style={{ marginTop: -35, backgroundColor: '#00000060', color: '#FFFF', fontSize: 12 }}>Edit Photo</Text>
                 </View>
             </View>
@@ -67,9 +68,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center',
         // alignItems: 'center',
-        paddingLeft: 10,
+        paddingLeft: verticalScale(10),
         alignSelf: 'center',
-        margin: 5,
+        margin: scale(5),
         elevation: 10
     },
     TextStyle: {
@@ -82,11 +83,10 @@ const styles = StyleSheet.create({
         height: verticalScale(41),
         borderRadius: moderateScale(30),
         justifyContent: 'center',
-        // alignContent: 'center',
         alignItems: 'center',
-        // alignSelf:'center',
+        alignSelf:'center',
         // paddingLeft: 10,
-        margin: 5,
+        margin: scale(5),
         elevation: 10
     },
     LogoutBtn: {
@@ -99,10 +99,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignSelf:'center',
         // paddingLeft: 10,
-        margin: 5,
+        margin: scale(5),
         elevation: 10
     },
 });
 
-//make this component available to the app
 export default Profile;

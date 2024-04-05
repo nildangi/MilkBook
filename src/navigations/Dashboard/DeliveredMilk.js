@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity,TextInput } from 'react-native';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Morning from './Morning';
@@ -9,24 +9,24 @@ import { useNavigation } from '@react-navigation/native';
 
 // create a component
 const Tab = createMaterialTopTabNavigator();
-const DeliveredMilk = ({navigation}) => {
+const DeliveredMilk = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.4, backgroundColor: '#04C6F1', flexDirection: 'row', alignItems: 'center' }}>
                 <View>
-                    <TouchableOpacity onPress={() => navigation.navigate('SocietyDetails')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('OrderDetails')}>
                         <Image
                             style={{ margin: 10, justifyContent: 'center' }}
                             source={require('../../assest/Arrow-Right.png')} />
                     </TouchableOpacity>
                 </View>
                 <View style={{ justifyContent: 'space-around', alignItems: 'center', marginLeft: 100 }}>
-                    <Text style={{ color: '#FFFF',fontWeight:'600',fontSize:18 }}> Delivered Milk</Text>
+                    <Text style={{ color: '#FFFF', fontWeight: '600', fontSize: 18 }}> Delivered Milk</Text>
                 </View>
             </View>
             <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                 <View style={styles.InputStyle}>
-                    <Text style={{ margin: 5 }}>12/09/2022</Text>
+                    <TextInput style={{ margin: 5 }}>12/09/2022</TextInput>
                     <Image
                         style={{ margin: 10 }}
                         source={require('../../assest/Calendar.png')} />
@@ -36,14 +36,25 @@ const DeliveredMilk = ({navigation}) => {
                         <Text style={{ color: '#FFFF' }}>Add Customer</Text>
                     </TouchableOpacity></View>
             </View>
-            <View style={{flex:6}}>
-            <Tab.Navigator>
-                <Tab.Screen name="Morning" component={Morning} />
-                <Tab.Screen name="Evening" component={Evening} />
-            </Tab.Navigator>
+            <View style={{ flex: 6 }}>
+
+                <Tab.Navigator
+                    screenOptions={{
+                        tabBarLabelStyle: { fontSize: 18, fontWeight: "500", textTransform: 'none' },
+                        tabBarItemStyle: { width: scale(110) },
+                        tabBarIndicatorStyle: {
+                            borderBottomColor: "black",
+                            borderBottomWidth: 3,
+                            width: '25%',
+                            left: "12%"
+                        }
+                    }}>
+                    <Tab.Screen name="Morning" component={Morning} />
+                    <Tab.Screen name="Evening" component={Evening} />
+                </Tab.Navigator>
             </View>
         </View>
-       
+
     );
 };
 
@@ -81,5 +92,4 @@ const styles = StyleSheet.create({
     },
 });
 
-//make this component available to the app
 export default DeliveredMilk;

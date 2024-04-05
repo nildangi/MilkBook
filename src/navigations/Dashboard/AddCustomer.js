@@ -1,48 +1,59 @@
 //import liraries
-import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Morning from './Morning';
-import Evening from './Evening';
+import React, { Component, useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 // create a component
-const Tab = createMaterialTopTabNavigator();
 const AddCustomer = () => {
+    const [selectedRadio, setSelectedRadio] = useState(1)
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.4, backgroundColor: '#04C6F1', flexDirection: 'row', alignItems: 'center' }}>
                 <View>
-                    <TouchableOpacity onPress={() => navigation.navigate('SocietyDetails')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('OrderDetails')}>
                         <Image
                             style={{ margin: 10, justifyContent: 'center' }}
                             source={require('../../assest/Arrow-Right.png')} />
                     </TouchableOpacity>
                 </View>
                 <View style={{ justifyContent: 'space-around', alignItems: 'center', marginLeft: 100 }}>
-                    <Text style={{ color: '#FFFF',fontWeight:'600',fontSize:18 }}> Delivered Milk</Text>
+                    <Text style={{ color: '#FFFF', fontWeight: '600', fontSize: 18 }}> Delivered Milk</Text>
                 </View>
             </View>
-            <View style={{ flex: 0.6, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                <View style={styles.InputStyle}>
-                    <Text style={{ margin: 5 }}>12/09/2022</Text>
-                    <Image
-                        style={{ margin: 10 }}
-                        source={require('../../assest/Calendar.png')} />
-                </View>
-                <View>
-                    <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('Society')}>
-                        <Text style={{ color: '#FFFF' }}>Add Customer</Text>
-                    </TouchableOpacity></View>
+            <View style={{ flex: 1, alignItems: 'center', flexDirection: 'row',backgroundColor:'yellow' }}>
+
+                <TouchableOpacity onPress={() => setSelectedRadio(1)}>
+                    <View style={styles.radioWrapper}>
+                        <View style={styles.radio}>
+                            {
+                                selectedRadio === 1 ? <View style={styles.radioBg}>
+                                </View> : null
+                            }
+                        </View>
+                        <Text style={[styles.radioText]}>Customer</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => setSelectedRadio(2)}>
+                    <View style={styles.radioWrapper}>
+                        <View style={styles.radio}>
+                            {
+                                selectedRadio === 2 ?
+                                    <View>
+                                        <View style={styles.radioBg}></View>
+                                        <View style={{flex:4,justifyContent:'center',alignItems:'center'}}>
+                                        <Text style={{margin:10,backgroundColor:'red'}}>Nilesh</Text>
+                                        </View>
+                                    </View> : null
+                            }
+                        </View>
+                        <Text style={[styles.radioText]}>Delivery Partner</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
-            <View style={{flex:6}}>
-            <Tab.Navigator>
-                <Tab.Screen name="Morning" component={Morning} />
-                <Tab.Screen name="Evening" component={Evening} />
-            </Tab.Navigator>
-            </View>
+            {/* <View style={{ flex: 6, alignItems: 'center', flexDirection: 'row',backgroundColor:'lightblue' }}>
+                </View> */}
+
         </View>
-       
     );
 };
 
@@ -52,32 +63,29 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#F5F5F5',
     },
-    InputStyle: {
-        flexDirection: 'row',
-        backgroundColor: 'white',
-        width: scale(210),
-        height: verticalScale(42),
-        borderRadius: moderateScale(30),
-        justifyContent: 'space-between',
-        alignContent: 'center',
-        alignItems: 'center',
-        paddingLeft: 10,
-        alignSelf: 'center',
-        margin: 5
+    radioText: {
+        fontSize: 20
     },
-    addSociety: {
-        backgroundColor: '#04C6F1',
-        width: scale(120),
-        height: verticalScale(42),
-        borderRadius: moderateScale(30),
+    radio: {
+        height: 32,
+        width: 32,
+        borderColor: '#04C6F1',
+        borderWidth: 2,
+        borderRadius: 20,
+        margin: 10,
+        backgroundColor: '#FFFF',
         justifyContent: 'center',
-        // alignContent: 'center',
-        alignItems: 'center',
-        // alignSelf:'center',
-        // paddingLeft: 10,
-        margin: 5,
-        elevation: 10
+        alignItems: 'center'
+
     },
+    radioBg: {
+        backgroundColor: '#04C6F1',
+        height: 20,
+        width: 20,
+        margin: 4,
+        borderRadius: 20
+    },
+    radioWrapper: { flexDirection: 'row', alignItems: 'center' }
 });
 
 //make this component available to the app

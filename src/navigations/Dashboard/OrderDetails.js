@@ -10,7 +10,7 @@ const Society = ({ navigation }) => {
             <ScrollView>
                 <View style={{ flex: 0.1, backgroundColor: '#04C6F1',alignItems:'center',flexDirection:'row' }}>
                     <View>  
-                        <TouchableOpacity onPress={() => navigation.navigate('BottomNavigation')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Society')}>
                         <Image style={{ margin: 10 }}
                             source={require('../../assest/Arrow-Right.png')} />
                     </TouchableOpacity>

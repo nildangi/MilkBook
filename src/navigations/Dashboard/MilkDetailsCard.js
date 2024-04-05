@@ -7,12 +7,12 @@ import { Calendar } from 'react-native-calendars';
 
 // create a component
 const MilkDetailsCard = ({navigation}) => {
-    const [showModal, setShowModal] = useState(true);
+   
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.1, backgroundColor: '#04C6F1', justifyContent: 'center', alignItems: 'center', height: verticalScale(30), flexDirection: 'row' }}>
                 <TouchableOpacity onPress={() => navigation.navigate('PaymentDetails')}>
-                    <Image style={{ marginLeft: scale(-70) }}
+                    <Image style={{ marginLeft: scale(-80) }}
                         source={require('../../assest/Arrow-Right.png')} />
                 </TouchableOpacity>
                 <Text style={{ color: '#FFFF', fontWeight: '500', fontSize: 18 }}> Customer Milk Details</Text>

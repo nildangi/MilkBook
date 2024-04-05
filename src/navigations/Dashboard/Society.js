@@ -23,7 +23,7 @@ const Society = ({ navigation }) => {
                         source={require('../../assest/location.png')} />
                 </View>
                 <View>
-                    <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('OrderDetails')}>
+                    <TouchableOpacity style={styles.addSociety} onPress={() => navigation.navigate('AddCustomer')}>
                         <Text style={{ color: '#FFFF' }}>Add Society</Text>
                     </TouchableOpacity></View>
             </View>
